@@ -282,7 +282,7 @@
   }
   *{ scroll-behavior: smooth; }
   a{ color:inherit; text-decoration:none; }
-  body{ font-family:'Inter',sans-serif; color:var(--ink); background:#fff; -webkit-font-smoothing:antialiased; }
+  body{ margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:#fff; -webkit-font-smoothing:antialiased; }
   h1,h2,h3,h4,.font-display{ font-family:'Manrope',sans-serif; letter-spacing:-0.02em; }
   .eyebrow{ font-family:'Inter',sans-serif; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; font-size:0.72rem; }
 
@@ -392,6 +392,89 @@
   .article__pager a:hover{ border-color:var(--denim); }
   .article__pager small{ display:block; font:500 12px 'Inter',sans-serif; color:rgba(13,27,42,.5); margin-bottom:6px; }
   @media (max-width:560px){ .article__pager{ grid-template-columns:1fr; } }
+
+  /* ---- training / research / nutrition / ask ---- */
+  .nx-stack{ display:grid; gap:14px; }
+  .nx-item{ background:#fff; border:1px solid var(--alabaster); border-radius:18px; transition:border-color .25s ease, box-shadow .25s ease; }
+  .nx-item.is-open{ border-color:var(--denim); box-shadow:0 20px 40px -28px rgba(13,27,42,.25); }
+  .nx-toggle{ width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; text-align:left; padding:24px 28px; cursor:pointer; background:none; border:0; font:inherit; color:inherit; }
+  .nx-chev{ flex-shrink:0; transition:transform .25s ease; }
+  .nx-item.is-open .nx-chev{ transform:rotate(180deg); }
+  .nx-body{ display:none; padding:0 28px 30px; border-top:1px solid var(--alabaster); margin:0 0; }
+  .nx-item.is-open .nx-body{ display:block; padding-top:26px; }
+  .nx-tag{ font:600 11px 'Inter',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--dusk); margin-bottom:6px; }
+  .nx-title{ font-family:'Manrope',sans-serif; font-weight:700; font-size:1.25rem; line-height:1.3; }
+  .nx-sub{ font-size:.92rem; line-height:1.65; color:rgba(13,27,42,.6); margin-top:4px; }
+  .nx-h{ font:700 12px 'Inter',sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--dusk); margin:22px 0 10px; }
+  .nx-p{ font-size:.98rem; line-height:1.75; color:rgba(13,27,42,.8); }
+  .nx-fulltitle{ font-family:'Manrope',sans-serif; font-weight:700; font-size:1.05rem; line-height:1.45; margin-bottom:18px; }
+  .nx-list{ list-style:none; padding:0; margin:0; display:grid; gap:9px; }
+  .nx-list li{ position:relative; padding-left:20px; font-size:.95rem; line-height:1.7; color:rgba(13,27,42,.8); }
+  .nx-list li::before{ content:''; position:absolute; left:2px; top:.72em; width:6px; height:6px; border-radius:9999px; background:var(--denim); }
+  .nx-list--tight{ gap:4px; } .nx-list--tight li{ font-size:.85rem; line-height:1.5; padding-left:16px; } .nx-list--tight li::before{ width:4px; height:4px; top:.65em; }
+  .nx-chips{ display:flex; flex-wrap:wrap; gap:8px; }
+  .nx-chips span{ font:500 13px 'Inter',sans-serif; padding:6px 12px; border-radius:9999px; background:rgba(224,225,221,.55); color:var(--ink); }
+  .nx-chips--light{ justify-content:center; margin-top:18px; }
+  .nx-chips--light button{ font:500 13px 'Inter',sans-serif; padding:8px 14px; border-radius:9999px; border:1px solid rgba(255,255,255,.25); background:transparent; color:#fff; cursor:pointer; transition:background .2s ease; }
+  .nx-chips--light button:hover{ background:rgba(255,255,255,.12); }
+  .nx-cols{ display:grid; gap:24px; }
+  @media (min-width:800px){ .nx-cols{ grid-template-columns:1fr 1fr; } }
+  .nx-note{ margin-top:22px; font-size:.9rem; line-height:1.7; color:rgba(13,27,42,.65); background:rgba(224,225,221,.4); border-radius:12px; padding:14px 18px; }
+  .nx-callout{ margin-top:34px; max-width:760px; border-left:3px solid var(--dusk); background:#fff; border-radius:0 14px 14px 0; padding:18px 22px; font-size:.95rem; line-height:1.7; color:rgba(13,27,42,.75); }
+  .nx-week{ display:grid; gap:12px; grid-template-columns:1fr; }
+  @media (min-width:640px){ .nx-week{ grid-template-columns:repeat(2,1fr); } }
+  @media (min-width:1024px){ .nx-week{ grid-template-columns:repeat(3,1fr); } }
+  .nx-day{ border:1px solid var(--alabaster); border-radius:14px; padding:16px 18px; background:#fff; }
+  .nx-day__d{ font:700 11px 'Inter',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:var(--dusk); }
+  .nx-day__t{ font-family:'Manrope',sans-serif; font-weight:700; font-size:.98rem; margin:4px 0 10px; line-height:1.3; }
+  .nx-card{ border:1px solid var(--alabaster); border-radius:18px; padding:26px 28px; background:#fff; }
+  .nx-twocol{ display:grid; gap:20px; margin-top:36px; }
+  @media (min-width:860px){ .nx-twocol{ grid-template-columns:1fr 1fr; } }
+  .nx-steps{ margin:14px 0 20px; padding-left:20px; display:grid; gap:8px; font-size:.95rem; line-height:1.65; color:rgba(13,27,42,.8); }
+  .nx-calc{ border-top:1px solid var(--alabaster); padding-top:18px; }
+  .nx-calc__row{ display:flex; flex-wrap:wrap; gap:14px; align-items:flex-end; }
+  .nx-calc label{ display:grid; gap:6px; font:600 12px 'Inter',sans-serif; color:var(--dusk); }
+  .nx-calc input{ width:110px; border:1px solid var(--alabaster); border-radius:10px; padding:9px 12px; font:500 15px 'Inter',sans-serif; color:var(--ink); }
+  .nx-calc__out{ margin-left:auto; text-align:right; } .nx-calc__out span{ display:block; font:600 12px 'Inter',sans-serif; color:var(--dusk); } .nx-calc__out strong{ font-family:'Manrope',sans-serif; font-weight:800; font-size:2rem; }
+  .nx-cycle{ list-style:none; padding:0; margin:40px 0 0; display:grid; gap:12px; grid-template-columns:1fr; }
+  @media (min-width:640px){ .nx-cycle{ grid-template-columns:repeat(3,1fr); } }
+  @media (min-width:1024px){ .nx-cycle{ grid-template-columns:repeat(5,1fr); } }
+  .nx-cycle li{ border:1px solid var(--alabaster); border-radius:14px; padding:16px 18px; font-family:'Manrope',sans-serif; font-weight:600; font-size:.95rem; line-height:1.35; background:#fff; }
+  .nx-cycle li span{ display:block; font:700 11px 'Inter',sans-serif; letter-spacing:.12em; color:var(--denim); margin-bottom:8px; }
+  .nx-legend{ margin-top:36px; display:grid; gap:10px; font-size:.9rem; color:rgba(13,27,42,.7); line-height:1.55; }
+  @media (min-width:860px){ .nx-legend{ grid-template-columns:repeat(2,1fr); } }
+  .nx-dot{ display:inline-block; width:10px; height:10px; border-radius:9999px; margin-right:8px; }
+  .nx-dot--a,.nx-block--a{ --c:#1b263b; } .nx-dot--b,.nx-block--b{ --c:#b08968; } .nx-dot--c,.nx-block--c{ --c:#415a77; } .nx-dot--d,.nx-block--d{ --c:#778da9; }
+  .nx-dot{ background:var(--c); }
+  .nx-dot--d{ background:transparent; border:2px dashed var(--c); }
+  .nx-block{ margin-top:22px; border-left:3px solid var(--c); padding:2px 0 2px 18px; }
+  .nx-block .nx-h{ margin-top:0; color:var(--c); }
+  .nx-block--d{ border-left-style:dashed; }
+  .nx-meta{ display:grid; gap:12px; margin-bottom:6px; grid-template-columns:1fr; }
+  @media (min-width:700px){ .nx-meta{ grid-template-columns:repeat(2,1fr); } }
+  .nx-meta dt{ font:600 11px 'Inter',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:var(--dusk); } .nx-meta dd{ margin:2px 0 0; font-size:.92rem; line-height:1.5; }
+  .nx-nutri{ display:grid; gap:20px; margin-top:40px; grid-template-columns:1fr; }
+  @media (min-width:760px){ .nx-nutri{ grid-template-columns:repeat(2,1fr); } }
+  @media (min-width:1100px){ .nx-nutri{ grid-template-columns:repeat(3,1fr); } }
+  .nx-meals{ display:grid; gap:16px; margin-top:36px; grid-template-columns:1fr; }
+  @media (min-width:700px){ .nx-meals{ grid-template-columns:repeat(2,1fr); } }
+  @media (min-width:1100px){ .nx-meals{ grid-template-columns:repeat(5,1fr); } }
+  .nx-hyd{ display:grid; gap:10px; margin-top:12px; } .nx-hyd div{ display:grid; grid-template-columns:80px 1fr; font-size:.93rem; } .nx-hyd strong{ font-weight:600; } .nx-hyd span{ color:rgba(13,27,42,.7); }
+  .nx-link{ display:inline-block; font-weight:600; font-size:.92rem; color:var(--ink); border-bottom:1.5px solid var(--denim); padding-bottom:1px; }
+  .nx-link:hover{ border-color:var(--ink); }
+  .nx-ask{ display:flex; gap:10px; margin-top:32px; background:#fff; border-radius:9999px; padding:6px; }
+  .nx-ask input{ flex:1; min-width:0; border:0; outline:0; background:transparent; padding:12px 18px; font:500 16px 'Inter',sans-serif; color:var(--ink); }
+  .nx-ask button{ border:0; background:var(--ink); color:#fff; font:600 14px 'Inter',sans-serif; padding:12px 26px; border-radius:9999px; cursor:pointer; }
+  .nx-ask button:hover{ background:var(--prussian); }
+  .nx-results{ display:grid; gap:16px; }
+  .nx-answer--top{ border-color:var(--denim); box-shadow:0 20px 40px -30px rgba(13,27,42,.3); }
+  .nx-answer .nx-p{ margin:10px 0 14px; }
+  .nx-mini{ display:block; border:1px solid var(--alabaster); border-radius:14px; padding:14px 18px; background:#fff; margin-top:10px; transition:border-color .2s ease; } .nx-mini:hover{ border-color:var(--denim); }
+  .nx-mini strong{ display:block; font-family:'Manrope',sans-serif; font-weight:700; font-size:.95rem; } .nx-mini span{ display:block; font-size:.85rem; color:rgba(13,27,42,.55); margin-top:3px; }
+  .ask-fab{ position:fixed; right:20px; bottom:20px; z-index:60; display:flex; align-items:center; gap:8px; background:var(--ink); color:#fff !important; font:600 14px 'Inter',sans-serif; padding:13px 20px; border-radius:9999px; box-shadow:0 14px 30px -10px rgba(13,27,42,.5); transition:transform .25s ease, background .25s ease; }
+  .ask-fab:hover{ transform:translateY(-2px); background:var(--prussian); }
+  body.on-ask .ask-fab{ display:none; }
+  @media (max-width:520px){ .ask-fab{ right:14px; bottom:14px; padding:12px 16px; font-size:13px; } .nx-toggle{ padding:20px 18px; } .nx-body{ padding-left:18px; padding-right:18px; } }
 </style>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -408,10 +491,11 @@
       <span class="brand-mark brand-mark--sm"><img id="brand-logo-header" alt="NetRise logo" /></span>
       <span class="font-display font-800 text-[19px] tracking-tight">NetRise</span>
     </a>
-    <nav class="hidden lg:flex items-center gap-8" id="desktop-nav">
+    <nav class="hidden lg:flex items-center gap-6 xl:gap-8" id="desktop-nav">
       <a data-route="/" class="nav-link text-sm font-medium text-ink/80 hover:text-ink">Home</a>
       <a data-route="/learn" class="nav-link text-sm font-medium text-ink/80 hover:text-ink">Learn</a>
       <a data-route="/training" class="nav-link text-sm font-medium text-ink/80 hover:text-ink">Training Plans</a>
+      <a data-route="/nutrition" class="nav-link text-sm font-medium text-ink/80 hover:text-ink">Nutrition</a>
       <a data-route="/research" class="nav-link text-sm font-medium text-ink/80 hover:text-ink">Research</a>
       <a data-route="/insights" class="nav-link text-sm font-medium text-ink/80 hover:text-ink">Insights</a>
       <a data-route="/community" class="nav-link text-sm font-medium text-ink/80 hover:text-ink">Community</a>
@@ -429,6 +513,8 @@
       <a data-route="/" class="py-2.5 text-sm font-medium">Home</a>
       <a data-route="/learn" class="py-2.5 text-sm font-medium">Learn</a>
       <a data-route="/training" class="py-2.5 text-sm font-medium">Training Plans</a>
+      <a data-route="/nutrition" class="py-2.5 text-sm font-medium">Nutrition</a>
+      <a data-route="/ask" class="py-2.5 text-sm font-medium">Want to know something?</a>
       <a data-route="/research" class="py-2.5 text-sm font-medium">Research</a>
       <a data-route="/insights" class="py-2.5 text-sm font-medium">Insights</a>
       <a data-route="/community" class="py-2.5 text-sm font-medium">Community</a>
@@ -460,8 +546,10 @@
       <ul class="space-y-2.5 text-sm text-alabaster/80">
         <li><a data-route="/learn" class="hover:text-white">Learn</a></li>
         <li><a data-route="/training" class="hover:text-white">Training Plans</a></li>
+        <li><a data-route="/nutrition" class="hover:text-white">Nutrition</a></li>
         <li><a data-route="/research" class="hover:text-white">Research</a></li>
         <li><a data-route="/insights" class="hover:text-white">Insights</a></li>
+        <li><a data-route="/ask" class="hover:text-white">Want to know something?</a></li>
       </ul>
     </div>
     <div>
@@ -520,21 +608,188 @@ const LESSON_VIDEOS = {
   'receiving:Ball Control': 'RbXGpmsKedE',
 };
 
-const TRAINING_PLANS = [
-  { pos:'Beginner', focus:'Foundational movement and ball control', level:'New to the sport' },
-  { pos:'Setter', focus:'Hand technique, tempo, and court vision', level:'All levels' },
-  { pos:'Middle Blocker', focus:'Lateral quickness and block timing', level:'All levels' },
-  { pos:'Outside Hitter', focus:'Approach power and shot variety', level:'All levels' },
-  { pos:'Opposite', focus:'Right-side attacking and transition blocking', level:'All levels' },
-  { pos:'Libero', focus:'Passing platform and defensive reads', level:'All levels' },
+const STUDIES = [
+  { n:1, t:'The Force–Velocity Profile as a Determinant of Spike and Serve Ball Speed in Top-Level Male Volleyball Players',
+    short:'Force–Velocity Characteristics and Spike/Serve Performance', tag:'Physical · Attacking',
+    meta:[['Authors','Andrés Baena-Raya et al.'],['Published','2021'],['Journal','PLOS ONE'],['Participants','22 elite male volleyball players']],
+    q:'Which mechanical characteristics of jumping, sprinting and upper-body ballistic movement are associated with spike and serve ball speed?',
+    method:['The researchers tested 22 elite male players from the team ranked first in the Spanish First Division: 4 setters, 4 opposites, 6 middle blockers and 8 outside hitters.','Force–velocity characteristics were measured during loaded vertical jumps, sprinting and bench-press throwing. Spike ball speed and serve ball speed were then measured.','Correlations and regression analyses were used to see how strongly each physical characteristic was associated with volleyball performance.'],
+    results:['Theoretical maximal force of the vertical-jump force–velocity profile was very strongly correlated with spike speed (r = 0.81) and serve speed (r = 0.82).','Sprint velocity was strongly associated with spike speed (r = 0.70) and serve speed (r = 0.72).','Bench-press throw force was associated with spike speed (r = 0.55) and serve speed (r = 0.53).','Each mechanical variable on its own explained roughly 20–36% of the variability in spike and serve speed.'],
+    limits:['This does not mean that jumping higher automatically makes a better spiker. A spike also involves approach speed, timing, coordination, arm acceleration, ball contact and technique.','The study was cross-sectional, relatively small and limited to elite male players, so the results should not automatically be applied to young athletes, female athletes or beginners.'],
+    apply:['Supports measuring vertical jump, approach jump, sprint ability, spike speed and serve speed in future NetRise research.'],
+    future:'To what extent do vertical jump, approach jump, sprint ability, height and technical skill predict spike effectiveness among developing volleyball players?',
+    extra:null },
+  { n:2, t:'Effect of Service Training on Drill Methods and Target Methods on Improving Service Skills for Volleyball',
+    short:'Structured Training and Volleyball Serving Performance', tag:'Skill Acquisition',
+    meta:[['Authors','Ruslan, Gilberd Sandy, Nurjamal & Hendry Ismawan'],['Published','2021'],['Participants','26 junior female volleyball athletes']],
+    q:'Can structured serving practice improve volleyball serving performance? The study compared drill-based serving with target-based serving.',
+    method:['26 junior female athletes from Gajah Mungkur Volleyball Club in Samarinda were divided into a drill group (13 athletes) and a target group (13 athletes).','Both groups trained for six weeks.'],
+    results:['The serving training programme had a statistically significant effect. The reported overall improvement was 33.98%.','The drill group produced a normalized gain of g = 0.360, classified by the study as moderate. The target group produced g = 0.260, classified as low.','Post-test mean scores were 30.31 for the drill group and 25.69 for the target group.','The researchers concluded that both approaches improved serving, with the drill method producing the larger improvement in this particular sample.'],
+    limits:['The study does not establish that drills are universally better than target practice. The sample was small and specific: 26 junior female players, one club, a six-week intervention.','It is best read as supporting evidence for structured, repeated serving practice, not as a universal training prescription.'],
+    apply:['NetRise serving programmes should include repeated technical practice, progressive difficulty, target zones, measurable accuracy and regular testing.'],
+    future:'How much does structured target-based serving practice improve serving accuracy over 6–8 weeks among developing volleyball players?',
+    extra:null },
+  { n:3, t:'Training Methods to Improve Vertical Jump Performance',
+    short:'Training Methods for Improving Vertical Jump Performance', tag:'Strength & Conditioning',
+    meta:[['Authors','Jorge Pérez-Gómez & José A. L. Calbet'],['Published','2013'],['Journal','Journal of Sports Medicine and Physical Fitness'],['Type','Review']],
+    q:'Which training methods are effective for improving vertical jump performance?',
+    method:['The review grouped jump-training approaches into four categories: plyometric training, weight/resistance training, whole-body vibration and electromyostimulation.'],
+    results:['Plyometric training can improve muscular force, rate of force development, power, contraction velocity and elastic energy utilization.','Resistance training can improve muscular force, velocity, power and rate of force development.','The review concluded that combining plyometric training with resistance training was one of the strongest approaches for improving vertical jump.','The reasoning: resistance training builds force-producing capacity, while plyometrics develop rapid force production and the ability to use the stretch-shortening cycle.'],
+    limits:['A review from 2013 pools studies with different groups and programmes. It cannot say what the ideal mix, frequency or progression is for a young volleyball player.'],
+    apply:['Position-specific plans can combine resistance training, plyometric training and volleyball-specific jumping, rather than relying on endless jump repetitions.'],
+    future:'Which combination of resistance training, plyometric training and volleyball-specific jumping produces the greatest improvement in vertical jump among developing volleyball players?',
+    extra:{ title:'Supporting evidence from later volleyball-specific meta-analyses', items:['A meta-analysis of 14 randomized controlled trials found that plyometric jump training produced meaningful improvements in vertical jump performance in volleyball players.','Another meta-analysis of 18 studies and 746 volleyball players found improvements in countermovement jump, spike jump, squat jump and sprint performance after plyometric training.'] } },
+  { n:4, t:'Impact of Lower-Volume Training on Physical Fitness Adaptations in Team Sports Players',
+    short:'Training Volume, Training Load and Physical Performance', tag:'Load Management',
+    meta:[['Published','2025'],['Type','Systematic review & meta-analysis'],['Databases','PubMed, Scopus, SPORTDiscus, Web of Science'],['Records','5,188 identified, 17 articles included']],
+    q:'Does higher training volume necessarily produce greater physical-performance improvements?',
+    method:['The researchers searched four databases, identified 5,188 records and included 17 articles in the final review.','The analysis compared lower-volume and higher-volume training in team-sport athletes.'],
+    results:['For resistance-based training there was no significant overall difference between lower and higher volume (effect size −0.05, 95% CI −0.19 to 0.09, p = 0.506).','For vertical jump specifically: effect size 0.04, 95% CI −0.30 to 0.38, p = 0.813.','In the included studies, higher training volume did not clearly produce superior physical adaptations. Lower-volume resistance training can produce similar improvements in many circumstances, particularly when training is newly introduced.'],
+    limits:['The certainty of the evidence was rated very low and the studies varied substantially. This is a reason to question "more is always better", not proof that less is always enough.'],
+    apply:['Challenges the idea that more training always means more improvement. Quality, recovery, intensity and individualization matter.','NetRise should eventually collect training hours per week, session duration, session RPE, number of sessions, jump count, match volume, recovery, sleep and performance metrics.'],
+    future:'What amount and distribution of training produces the greatest performance improvement without excessive fatigue?',
+    extra:{ title:'Additional volleyball evidence on load monitoring', items:['A systematic review of volleyball training stress recommends monitoring internal load daily (session RPE, wellness, recovery) and external load through measures such as jump count and jump height.','A separate volleyball load review found that sessions commonly fall around 4–7 on the Borg RPE scale, with sessions containing more jumping generally producing higher loads.'] } },
+  { n:5, t:'Anthropometric and Physical Characteristics Allow Differentiation of Young Female Volleyball Players According to Playing Position and Level of Expertise',
+    short:'Position-Specific Physical Characteristics and Performance', tag:'Athlete Profiling',
+    meta:[['Authors','Milić et al.'],['Published','2017'],['Participants','181 female players, about 13–15 years old'],['Positions','28 middle blockers, 41 opposites, 54 passer-hitters, 30 setters, 28 liberos']],
+    q:'Do body measurements and physical tests separate young female players by position and by level of expertise?',
+    method:['The researchers measured height, body mass, BMI, somatotype, lower-body power, sprint speed, agility and upper-body power.'],
+    results:['Players in different positions differed significantly in height and somatotype. Middle blockers were generally the tallest and more ectomorphic. Liberos were generally the shortest and more mesomorphic/endomorphic.','There were no significant differences between positions in the measured physical-performance tests overall.','More successful players generally showed better lower-body power, speed, agility and upper-body power, depending on position.'],
+    limits:['The study describes group-level tendencies, not rules for individual athletes. A young player should never be told they cannot play a position because of their height or build.'],
+    apply:['Supports building position-specific performance profiles, instead of assuming every player should train identically.'],
+    future:null,
+    extra:{ title:'Additional position-specific evidence (2026)', items:['A 2026 systematic review of 28 volleyball match-play studies found substantial differences in match demands between positions.','Setters performed the greatest jump volumes. Middle blockers and outside/opposite hitters performed the most high jumps (over 50 cm).','Internal load differed by position. Middle blockers, liberos and setters often reported relatively high perceived exertion.'] } },
 ];
 
-const STUDIES = [
-  { n:1, t:'Vertical Jump vs. Spike Effectiveness', tag:'Physical · Attacking' },
-  { n:2, t:'Serving Accuracy Improvement', tag:'Skill Acquisition' },
-  { n:3, t:'Training Methods & Vertical Jump', tag:'Strength & Conditioning' },
-  { n:4, t:'Training Volume vs. Performance', tag:'Load Management' },
-  { n:5, t:'Position-Specific Physical Attributes', tag:'Athlete Profiling' },
+const PLANS = [
+  { key:'middle', pos:'Middle Blocker', focus:'Explosive and repeated jumping, lateral movement and blocking',
+    evidence:'Match-play evidence shows middle blockers perform a high number of high jumps, which supports the emphasis on explosive jumping and repeated high-intensity actions.',
+    physical:['Explosive jumping','Repeated jumping','Lateral movement','Blocking movement','Short acceleration','Landing control'],
+    technical:['Blocking footwork','Reading the setter','Closing blocks','Hand positioning','Quick attacks','Transition hitting','Attacking first-tempo balls','Blocking-to-attack transition'],
+    week:[
+      ['Mon','Jump + Blocking',['Countermovement jumps','Approach jumps','Low-volume plyometrics','Lateral bounds','Blocking footwork','Read-and-react blocking','Closing the block','Hand positioning']],
+      ['Tue','Recovery',['Mobility','Light movement','Stretching','Easy technical touches']],
+      ['Wed','Strength + Attack',['Squat variation','Split squat','Hip hinge','Calf strengthening','Trunk stability','Quick attack','Setter-middle timing','Transition attack']],
+      ['Thu','Team Training',['Normal volleyball practice. Do not automatically add extra jumping.']],
+      ['Fri','Reactive Jump + Block',['Block jumps','Lateral block movement','Repeated block actions','Approach jumps','Block-to-attack transition','Seam attacks','Quick attacks']],
+      ['Sat','Match / Game Simulation',['Reading','Timing','Transition','Repeated jumping']],
+      ['Sun','Rest',[]]] },
+  { key:'outside', pos:'Outside Hitter', focus:'Approach power, repeated jumping and all-round skill',
+    evidence:'Outside hitters, along with middles and opposites, performed the most high jumps (over 50 cm) in match-play research, so approach jumping and repeated jumping are central.',
+    physical:['Approach jump','Repeat jumping','Acceleration','Lateral movement','Upper-body power','Shoulder resilience'],
+    technical:['Serve receive','Spiking','Transition','High-ball attacking','Defense','Serving'],
+    week:[
+      ['Mon','Jump + Attack',['Approach jumps','Spike approach mechanics','Line attacks','Cross-court attacks','High-ball attacking']],
+      ['Tue','Passing + Defense',['Serve receive','Platform control','Movement passing','Defensive positioning','Digging']],
+      ['Wed','Strength',['Squat pattern','Single-leg strength','Hip hinge','Pulling','Pushing','Shoulder stability','Trunk work']],
+      ['Thu','Team Training',['Normal volleyball practice.']],
+      ['Fri','Attack + Serve Receive',['Transition attack','Out-of-system attacks','High-ball attacks','Serve receive under pressure']],
+      ['Sat','Match',[]],
+      ['Sun','Rest',[]]] },
+  { key:'opposite', pos:'Opposite', focus:'Right-side attacking, blocking and powerful repeated jumps',
+    evidence:'Opposites are among the positions with the most high jumps in match play, and they carry a lot of blocking and attacking duty.',
+    physical:['Explosive jumping','Repeated high jumps','Lateral blocking','Lower-body power','Upper-body power'],
+    technical:['Right-side attack','Blocking outside hitters','Serving','Transition attack','High-ball attacking'],
+    week:[
+      ['Mon','Jump + Right-Side Attacking',[]],
+      ['Tue','Blocking + Lateral Movement',[]],
+      ['Wed','Strength',[]],
+      ['Thu','Serving + Attacking',[]],
+      ['Fri','Jump + Transition',[]],
+      ['Sat','Match',[]],
+      ['Sun','Rest',[]]] },
+  { key:'setter', pos:'Setter', focus:'Quick, controlled movement, setting quality and decisions',
+    evidence:'Setters can accumulate substantial jump volume during matches, so the programme does not ignore jumping, but movement, setting quality and decision-making come first.',
+    physical:['Quickness','Acceleration','Deceleration','Lateral movement','Explosive but controlled jumping','Trunk stability'],
+    technical:['Hand contact','Footwork','Setting accuracy','Tempo','Back setting','Jump setting','Decision-making','Transition setting'],
+    week:[
+      ['Mon','Setting + Footwork',['Stationary setting','Movement setting','Target setting','Footwork']],
+      ['Tue','Strength + Jump',['Lower-body strength','Single-leg strength','Trunk stability','Low-volume jump training']],
+      ['Wed','Setting Under Movement',['Imperfect passes','Movement, stop, set','Back setting','Jump setting','Quick tempo']],
+      ['Thu','Team Training',['Normal volleyball practice.']],
+      ['Fri','Decision Making',['Random, game-like scenarios. Ask "Where should the ball go?" rather than only "Can you technically set the ball?"']],
+      ['Sat','Match',[]],
+      ['Sun','Rest',[]]] },
+  { key:'libero', pos:'Libero', focus:'Reaction, agility, low-position movement and passing',
+    evidence:'The position study found liberos were generally shorter in its young female sample, and linked that to a lower centre of mass and the quick direction changes defence needs. That describes a tendency, not a rule.',
+    physical:['Reaction speed','Agility','Lateral movement','Acceleration','Deceleration','Low-position endurance','Movement efficiency'],
+    technical:['Serve receive','Digging','Reading attackers','Platform control','Emergency defense','Communication'],
+    week:[
+      ['Mon','Agility + Passing',['Lateral shuffle','Crossover movement','Acceleration','Deceleration','Reaction drills','Serve receive','Target passing']],
+      ['Tue','Strength',['Single-leg strength','Posterior chain','Trunk stability','Controlled upper-body strength']],
+      ['Wed','Defense + Reaction',['Visual reaction drills','Random ball drops','Random digs','Short/long reaction','Defensive positioning']],
+      ['Thu','Team Training',['Normal volleyball practice.']],
+      ['Fri','Passing Under Pressure',['Difficult serves','Target zones','Seam communication','Movement passing','Defensive transition']],
+      ['Sat','Match',[]],
+      ['Sun','Rest',[]]] },
+  { key:'beginner', pos:'Beginner', focus:'Learning the basics and moving well, for players who have not specialised',
+    evidence:'The exact amount should depend on existing school and club training. NetRise does not encourage young athletes to pile extra training on top of an already heavy schedule.',
+    physical:['Squatting','Lunging','Hinging','Pushing','Pulling','Jumping','Landing','Trunk control'],
+    technical:['Passing','Serving','Setting','Attacking','Movement'],
+    week:[
+      ['Weekly','2–3 volleyball sessions',['Passing','Serving','Setting','Attacking','Movement']],
+      ['Weekly','2 physical-development sessions',['Squatting','Lunging','Hinging','Pushing','Pulling','Jumping','Landing','Trunk control']],
+      ['Weekly','1–2 recovery sessions',[]],
+      ['Weekly','1 complete rest day',[]]] },
+];
+
+const NUTRITION = {
+  carbs:{ t:'Carbohydrates', s:'Primary training fuel', d:'Carbohydrates are what powers training. Availability can be raised around harder training days and competition.', ex:['Rice','Roti','Oats','Potatoes','Pasta','Bread','Fruit','Cereal'] },
+  protein:{ t:'Protein', s:'Spread through the day', d:'Include a protein source across the day. The goal is consistent overall nutrition, not excessive protein.', ex:['Milk','Curd','Paneer','Tofu','Soy','Dal','Beans','Nuts','Eggs','Chicken','Fish','Lean meat'] },
+  fruitveg:{ t:'Fruit & vegetables', s:'Aim for variety', d:'A wide range of colours covers many of the vitamins and minerals growing athletes need.', ex:['Bananas','Oranges','Apples','Berries','Mangoes','Spinach','Carrots','Tomatoes','Peppers','Seasonal vegetables'] },
+  calcium:{ t:'Calcium & vitamin D', s:'Bones and muscles are still developing', d:'These matter during adolescence. Vitamin D status varies a lot between individuals, so supplementation should be discussed with a healthcare professional, not taken generically.', ex:['Milk','Curd','Paneer','Fortified alternatives'] },
+  iron:{ t:'Iron', s:'Important, especially if intake is low', d:'Athletes who suspect a deficiency should seek a professional assessment instead of self-prescribing iron.', ex:['Lentils','Beans','Leafy greens','Eggs','Meat'] },
+};
+
+const MEALS = [
+  ['Breakfast',['Oats + milk + banana','or Eggs + toast + fruit']],
+  ['Lunch',['Rice or roti','Dal, chicken or paneer','Vegetables','Curd']],
+  ['Pre-training',['Banana + yogurt','or Toast + peanut butter','or Fruit + milk']],
+  ['Post-training',['A normal balanced meal','or Milk/curd + fruit, followed by a meal']],
+  ['Dinner',['Rice or roti','A protein source','Vegetables']],
+];
+
+const KB = [
+  { k:'how can i jump higher improve vertical jump increase height of jump tips', q:'How can a player jump higher?', a:'The research points to combining resistance training (to build force) with plyometrics (to use that force quickly), plus the volleyball jumping already done in practice, rather than endless extra jump reps. Landing control, recovery and supervision matter for young athletes.', link:'/insights/why-endless-jump-reps-arent-the-answer' },
+  { k:'jump higher better spiker spike vertical jump hit harder', q:'Does jumping higher make you a better spiker?', a:'Not automatically. A 2021 study of 22 elite men found jump force was strongly linked to spike speed (r = 0.81), but a spike also depends on approach, timing, coordination and technique, and the study was small and elite-only. Physical power is worth building alongside technique, not instead of it.', link:'/insights/does-jumping-higher-make-you-a-better-spiker' },
+  { k:'force velocity profile force-velocity explain what is', q:'What is a force–velocity profile?', a:'It describes how one athlete trades off force (how hard they can push) against velocity (how fast they can move). Two players with the same jump height can have very different profiles, which can change what training suits them. On its own, each measure explained only about 20–36% of spike and serve speed.', link:'/insights/what-is-a-force-velocity-profile' },
+  { k:'sprint speed running fast hitting serving acceleration', q:'Does sprint speed matter for hitting and serving?', a:'In the 2021 elite-men study, sprint velocity was strongly associated with spike speed (r = 0.70) and serve speed (r = 0.72). That is a link, not proof of cause, and it may simply reflect overall explosiveness. NetRise plans to test short sprints in young players.', link:'/insights/does-sprint-speed-matter-for-hitting-and-serving' },
+  { k:'drill target serving practice better serve which', q:'Are serving drills or target practice better?', a:'In a six-week study of 26 junior girls, both improved and the drill group gained a little more (moderate vs low). That is one club and one sample, so it does not prove drills always win. The safe takeaway is that structured, repeated serving practice works.', link:'/insights/drill-practice-or-target-practice-for-serving' },
+  { k:'how long improve serve weeks improvement beginner serving', q:'How long does it take to improve a serve?', a:'In the six-week serving study, players improved by about 34% overall. That does not mean everyone will, but a few weeks of regular, structured practice is enough to see change in many young players. Tracking, for example ten serves at a target twice a week, makes progress visible.', link:'/insights/how-long-does-it-take-to-improve-your-serve' },
+  { k:'plyometrics weights resistance training vertical jump higher jump build lifting', q:'Is plyometrics or weight training better for jumping higher?', a:'The 2013 review found that combining plyometric training with resistance training was one of the strongest approaches. Lifting builds force, plyometrics teach the body to use it quickly. Both should be done with supervision and gradual progression for young players.', link:'/insights/plyometrics-or-weights-for-vertical-jump' },
+  { k:'plyometric work volleyball players meta-analysis box jumps evidence', q:'Does plyometric training work for volleyball players?', a:'Yes, the evidence supports it. A meta-analysis of 14 randomized trials and another of 18 studies with 746 volleyball players found improvements in vertical jump, spike jump, squat jump and sprint performance. It does not say how to teach it safely to beginners, which is where good coaching matters.', link:'/insights/does-plyometric-training-work-for-volleyball-players' },
+  { k:'more training better volume overtraining extra sessions lower volume', q:'Is more training always better?', a:'Not necessarily. A 2025 meta-analysis of team-sport athletes found no significant difference between lower and higher training volume for resistance training or vertical jump. The evidence was rated very low certainty, so it is a reason to question "more is better", not proof that less is always enough.', link:'/insights/is-more-training-always-better' },
+  { k:'session rpe rating perceived exertion load calculate how hard training', q:'What is session RPE and how is load calculated?', a:'After training, the player rates how hard it was from 1 to 10. Multiply that by the session length in minutes to get session load. For example, 60 minutes at RPE 7 is 420 arbitrary units. It is cheap, simple and compared against the same player\'s other sessions.', link:'/insights/what-is-session-rpe' },
+  { k:'how hard practice normal intensity borg scale effort', q:'How hard is a normal volleyball practice?', a:'A volleyball load review found sessions commonly sit around 4 to 7 on the Borg RPE scale, with more jumping generally meaning a higher load. A hitting-heavy practice can feel much harder than a passing one of the same length.', link:'/insights/how-hard-is-a-normal-volleyball-practice' },
+  { k:'count jumps jump count workload monitoring', q:'Should jumps be counted in training?', a:'Research recommends tracking internal load (session RPE, wellness, recovery) and external load such as jump count and jump height. A rough low/medium/high jump rating per session is a cheap middle ground for schools without sensors.', link:'/insights/should-we-be-counting-jumps' },
+  { k:'height position tall short middle libero decide', q:'Does height decide your position?', a:'No. A 2017 study of 181 young girls found positions differed in height and body type, but not in the physical performance tests overall. Those are group tendencies, not rules, and young players grow at very different times. NetRise builds position profiles, not position rules.', link:'/insights/does-height-decide-your-position' },
+  { k:'middle blocker mb training plan block blocking', q:'How should a middle blocker train?', a:'Middle blockers perform many high jumps in matches, so the NetRise template emphasises explosive and repeated jumping, lateral movement, short acceleration and landing control, plus blocking footwork, reading the setter and quick attacks. The full weekly template is on the Training Plans page.', link:'/training' },
+  { k:'outside hitter oh training plan attack passer hitter', q:'How should an outside hitter train?', a:'The outside hitter template focuses on approach jumping, repeat jumping, acceleration, upper-body power and shoulder resilience, alongside serve receive, spiking, transition and defence. See the full week on the Training Plans page.', link:'/training' },
+  { k:'opposite right side training plan', q:'How should an opposite train?', a:'The opposite template emphasises explosive and repeated high jumps, lateral blocking and lower- and upper-body power, with right-side attacking, blocking and serving as the technical priorities.', link:'/training' },
+  { k:'setter training plan jump set hands decision making', q:'How should a setter train?', a:'Setters can jump a lot in matches, so the plan keeps low-volume jump work, but movement, setting accuracy and decision-making come first. Friday sessions use random, game-like scenarios that ask "where should the ball go?"', link:'/insights/do-setters-jump-more-than-you-think' },
+  { k:'libero training plan defense passing reaction agility', q:'How should a libero train?', a:'Liberos need reaction speed, agility, lateral movement, acceleration and deceleration, and the ability to stay low. The NetRise template combines agility, single-leg strength and trunk work with passing under pressure, and much less high jumping than for a middle.', link:'/insights/what-do-liberos-need-that-other-players-dont' },
+  { k:'beginner new player start how to begin plan', q:'How should a complete beginner start?', a:'Two or three volleyball sessions a week (passing, serving, setting, attacking, movement), two physical-development sessions (squat, lunge, hinge, push, pull, jump, land, trunk control), one or two recovery sessions and a full rest day, adjusted to existing school and club training.', link:'/training' },
+  { k:'rest recovery sleep days off tired', q:'Does recovery really matter?', a:'Yes. Volleyball research recommends monitoring wellness and recovery daily alongside session effort, and every NetRise position plan includes lighter days and a full rest day. There is no firm answer on exactly how much sleep a young player needs, since it varies with age, growth and workload.', link:'/insights/does-recovery-really-matter-for-young-players' },
+  { k:'plateau stuck not improving progress stopped', q:'Why might a player stop improving?', a:'There is no single cause. Clues include too much training with too little recovery, doing the same type of work for too long, practice that is no longer challenging, and growth spurts or school stress. Tracking training, sleep and soreness helps find what changed.', link:'/insights/why-do-players-plateau' },
+  { k:'elite beginners young players apply research professional', q:'Can beginners train like elite players?', a:'Elite research should be borrowed carefully. A beginner needs good technique, sensible progression and recovery rather than an elite programme, and findings from elite men do not automatically apply to young players or girls.', link:'/insights/can-beginners-train-like-elite-players' },
+  { k:'correlation r value meaning 0.81 statistics', q:'What does "r = 0.81" mean?', a:'A correlation between -1 and 1 shows how closely two things move together. 0.81 is strong, but correlation is not cause, even strong links leave a lot unexplained, and a correlation describes a group rather than any individual.', link:'/insights/what-does-r-equals-0-81-actually-mean' },
+  { k:'small studies sample size trust 26 players reliable', q:'Can small studies be trusted?', a:'They are clues, not verdicts. A small group may not look like everyone else and chance can swing results, so findings are stronger when other studies agree. NetRise says plainly who was studied and for how long.', link:'/insights/what-can-26-players-really-tell-us' },
+  { k:'eat food diet nutrition what to eat athlete meals', q:'What should a young volleyball player eat?', a:'NetRise gives general education, not individual diets. The aim is to fuel growth, fuel training and recover properly with regular balanced meals: carbohydrates for energy, a protein source through the day, fruit and vegetables, calcium and iron-rich foods, and enough fluids.', link:'/nutrition' },
+  { k:'carbohydrates carbs energy rice roti fuel', q:'Why do athletes need carbohydrates?', a:'Carbohydrates are the main training fuel. Rice, roti, oats, potatoes, pasta, bread, fruit and cereal all count, and availability can be raised around harder training and competition.', link:'/nutrition' },
+  { k:'protein muscle milk paneer dal eggs how much', q:'How much protein is needed?', a:'A protein source across the day is enough for most young athletes: milk, curd, paneer, tofu, dal and beans, or eggs, chicken and fish. The goal is consistent overall nutrition, not extreme protein targets.', link:'/nutrition' },
+  { k:'water hydration drink fluids electrolytes sweat', q:'How should players hydrate?', a:'Arrive at training hydrated, drink regularly during it and replace fluids afterwards. For long, hot or very sweaty sessions, electrolytes and carbohydrate-containing fluids can sometimes help.', link:'/nutrition' },
+  { k:'calcium vitamin d bones milk curd', q:'Do teenage athletes need calcium and vitamin D?', a:'They matter in adolescence because bones and muscles are still developing. Milk, curd, paneer and fortified alternatives help. Vitamin D status varies a lot, so supplements should be discussed with a healthcare professional.', link:'/nutrition' },
+  { k:'iron deficiency lentils anemia tired', q:'What about iron?', a:'Iron is found in lentils, beans, leafy greens, eggs and meat. Anyone who suspects a deficiency should get a professional assessment instead of self-prescribing iron.', link:'/nutrition' },
+  { k:'supplements pre-workout creatine protein powder jump supplement fat burner', q:'Do young players need supplements?', a:'NetRise follows a food-first approach and does not recommend random pre-workouts, fat burners, testosterone boosters or "jump supplements". Anyone considering supplements should speak to a qualified sports dietitian or medical professional first.', link:'/insights/do-young-volleyball-players-need-supplements' },
+  { k:'before training pre-training snack meal eat before practice', q:'What should I eat before training?', a:'Something light that is easy to digest, such as a banana with yogurt, toast with peanut butter, or fruit with milk.', link:'/nutrition' },
+  { k:'after training post-training recovery meal eat after practice', q:'What should I eat after training?', a:'A normal balanced meal is fine, or milk or curd with fruit followed by a meal.', link:'/nutrition' },
+  { k:'weight loss lose weight diet calorie cutting weight bulk', q:'Can NetRise give me a diet or weight-loss plan?', a:'No. NetRise does not recommend calorie restriction, weight-loss targets, bodybuilding diets, extreme protein targets, dehydration or cutting weight for young athletes. For anything individual, speak to a qualified sports dietitian or doctor.', link:'/nutrition' },
+  { k:'what is netrise about organization mission who', q:'What is NetRise?', a:'NetRise is a youth-led volleyball development initiative combining education, community coaching, performance research and evidence-based training plans, with a focus on reaching players who would otherwise have limited access to the sport.', link:'/' },
+  { k:'volunteer join help partner get involved coach', q:'How can I get involved?', a:'Volunteers, coaches, schools and partners can reach out through the Get Involved page.', link:'/involved' },
+  { k:'research program studies how research works cycle data', q:'How does the NetRise research programme work?', a:'It follows a cycle: existing literature, NetRise research questions, player data, statistical analysis, findings, evidence-informed training plans, player outcomes, new data and new research. Published studies are kept separate from NetRise hypotheses, which are questions to test, not facts.', link:'/research' },
+  { k:'data collect monitoring weekly record player track', q:'What will NetRise track about players?', a:'Over time, a simple weekly record: training hours, session RPE, number of sessions, matches, jump sessions, sleep, soreness, fatigue, mood and performance. The aim is to study how training load relates to performance and recovery.', link:'/training' },
+  { k:'injury safe safety pain landing supervision knees medical', q:'Is the training safe for young players?', a:'The templates are general, evidence-informed education, not medical or individual strength-and-conditioning prescriptions. They should be adjusted for age, training age, existing team training, injury history, equipment and supervision, and young athletes should train with qualified supervision and sensible progression.', link:'/training' },
+  { k:'videos learn lessons spiking setting receiving watch', q:'Where are the teaching videos?', a:'The Learn page has nine short lessons: three on spiking, three on setting and three on receiving.', link:'/learn' },
 ];
 
 const AUTHOR = 'Madhav Jalan';
@@ -756,26 +1011,76 @@ function pageLearn(){
   `;
 }
 
+function bullets(items, cls){ return `<ul class="nx-list ${cls||''}">${items.map(i => `<li>${i}</li>`).join('')}</ul>`; }
+function chips(items){ return `<div class="nx-chips">${items.map(i => `<span>${i}</span>`).join('')}</div>`; }
+
 function pageTraining(){
   return `
   <section class="bg-alabaster/40 py-20">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      ${sectionHeader('Training Plans','Evidence-based development, by position.', 'Each plan is built from our research pipeline — pairing strength, plyometrics, skill work, recovery, and mobility with the studies behind them. Full plans are in development.')}
+      ${sectionHeader('Training Plans','Evidence-informed templates, by position.', 'Each plan pairs strength, plyometrics, skill work and recovery with the research behind it. Open a position to see its priorities and a full week.')}
+      <div class="nx-callout fade-up">
+        <strong>Read this first.</strong> These are evidence-informed templates, not individual medical or strength-and-conditioning prescriptions. They should be adjusted for age, training age, current team training, competition schedule, equipment, injury history, supervision and recovery. For young athletes, quality and progression matter more than adding volume.
+      </div>
     </div>
   </section>
-  <section class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      ${TRAINING_PLANS.map(p => `
-        <div class="fade-up border border-alabaster rounded-2xl p-7 card-hover flex flex-col">
-          <div class="flex items-center justify-between mb-6">
-            ${placeholderTag('In Development')}
-          </div>
-          <h3 class="font-display font-700 text-xl mb-2">${p.pos}</h3>
-          <p class="text-sm text-ink/55 leading-relaxed mb-6">${p.focus}</p>
-          <div class="mt-auto pt-5 border-t border-alabaster grid grid-cols-2 gap-2 text-xs text-ink/50">
-            <span>Strength</span><span>Plyometrics</span><span>Skill Work</span><span>Recovery</span><span>Mobility</span><span>Research Refs</span>
+  <section class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+    <div class="nx-stack">
+      ${PLANS.map((p,i) => `
+        <div class="nx-item fade-up ${i===0 ? 'is-open' : ''}">
+          <button class="nx-toggle" type="button" aria-expanded="${i===0}">
+            <div>
+              <p class="nx-tag">${p.key==='beginner' ? 'Getting started' : 'Position plan'}</p>
+              <h3 class="nx-title">${p.pos}</h3>
+              <p class="nx-sub">${p.focus}</p>
+            </div>
+            <svg class="nx-chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#0d1b2a" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+          <div class="nx-body">
+            <div class="nx-cols">
+              <div><h4 class="nx-h">Physical priorities</h4>${chips(p.physical)}</div>
+              <div><h4 class="nx-h">Technical priorities</h4>${chips(p.technical)}</div>
+            </div>
+            <p class="nx-note"><strong>Evidence link.</strong> ${p.evidence}</p>
+            <h4 class="nx-h" style="margin-top:28px">${p.key==='beginner' ? 'Weekly structure' : 'Weekly template'}</h4>
+            <div class="nx-week">
+              ${p.week.map(([d,t,items]) => `
+                <div class="nx-day">
+                  <p class="nx-day__d">${d}</p>
+                  <p class="nx-day__t">${t}</p>
+                  ${items.length ? bullets(items,'nx-list--tight') : ''}
+                </div>`).join('')}
+            </div>
           </div>
         </div>`).join('')}
+    </div>
+  </section>
+
+  <section class="bg-alabaster/40 py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      ${sectionHeader('Training Volume & Monitoring','Measure how hard training felt, not just how long it lasted.', 'Session RPE is one of the most practical ways volleyball research monitors internal training load, and it needs nothing more than a notebook.')}
+      <div class="nx-twocol">
+        <div class="nx-card fade-up">
+          <h3 class="nx-title" style="font-size:1.1rem">How it works</h3>
+          <ol class="nx-steps">
+            <li>After each session, ask: <em>"How hard was today's session from 1 to 10?"</em></li>
+            <li>Multiply that rating by the session length in minutes.</li>
+            <li>The result is the session load, in arbitrary units. Compare it with the same player's other days and weeks.</li>
+          </ol>
+          <div class="nx-calc" id="nx-calc">
+            <div class="nx-calc__row">
+              <label>Minutes<input id="nx-min" type="number" min="0" max="300" value="60"></label>
+              <label>RPE (1–10)<input id="nx-rpe" type="number" min="1" max="10" value="7"></label>
+              <div class="nx-calc__out"><span>Session load</span><strong id="nx-load">420</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="nx-card fade-up">
+          <h3 class="nx-title" style="font-size:1.1rem">Weekly player record</h3>
+          <p class="nx-sub" style="margin-bottom:14px">Players can record these, so NetRise can eventually study how training load relates to performance and recovery:</p>
+          ${chips(['Training hours','Session RPE','Number of sessions','Matches','Jump sessions','Sleep','Soreness','Fatigue','Mood','Performance'])}
+        </div>
+      </div>
     </div>
   </section>
   `;
@@ -791,19 +1096,64 @@ function pageResearch(){
     'Evidence-Based Recommendations':'Findings translated into coaching guidance',
     'Training Plans':'Position-specific plans built on the recommendations',
   };
+  const cycle = ['Existing literature','NetRise research questions','Player data','Statistical analysis','Findings','Evidence-informed training plans','Player outcomes','New data','New research'];
   return `
   <section class="bg-ink text-white py-24 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
       ${eyebrow('Research Program').replace('text-dusk','text-denim')}
       <h1 class="font-display font-800 text-4xl sm:text-5xl max-w-2xl leading-[1.08]">Reviewing the literature. Building our own.</h1>
-      <p class="mt-6 text-base text-alabaster/60 max-w-xl leading-relaxed">NetRise runs an ongoing Volleyball Performance Research Program — reviewing existing sports-science literature and collecting original player data to close gaps the literature leaves open.</p>
+      <p class="mt-6 text-base text-alabaster/60 max-w-xl leading-relaxed">The NetRise Volleyball Performance Research Program investigates how physical characteristics, technical ability, training methods, training load and playing position interact to influence volleyball performance. It combines mathematics, statistics, physics, sports science, performance analysis and, over time, original player data.</p>
     </div>
     <div class="absolute inset-x-0 bottom-0 h-32 opacity-40">${trajectorySVG(1400,130,'#778da9',0.5)}</div>
   </section>
 
-  <!-- FRAMEWORK ROADMAP -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+    ${sectionHeader('How the program works','A cycle that keeps feeding itself.')}
+    <ol class="nx-cycle">
+      ${cycle.map((c,i) => `<li class="fade-up"><span>${String(i+1).padStart(2,'0')}</span>${c}</li>`).join('')}
+    </ol>
+    <div class="nx-legend fade-up">
+      <div><span class="nx-dot nx-dot--a"></span><strong>What the research found.</strong> Results reported by published studies.</div>
+      <div><span class="nx-dot nx-dot--b"></span><strong>What it does not show.</strong> Limits to keep in mind.</div>
+      <div><span class="nx-dot nx-dot--c"></span><strong>How NetRise uses it.</strong> Practical decisions based on the evidence.</div>
+      <div><span class="nx-dot nx-dot--d"></span><strong>Question to test.</strong> A NetRise hypothesis for future data. Not an established fact.</div>
+    </div>
+  </section>
+
+  <section class="bg-alabaster/40 py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      ${sectionHeader('A. Literature Reviews','Five studies that start the program.', 'Open a study to see what was done, what it found, what it does not show, and the NetRise question it leads to.')}
+      <div class="nx-stack" style="margin-top:44px">
+        ${STUDIES.map(s => `
+          <div class="nx-item fade-up">
+            <button class="nx-toggle" type="button" aria-expanded="false">
+              <div>
+                <p class="nx-tag">Study ${s.n} · ${s.tag}</p>
+                <h3 class="nx-title">${s.short}</h3>
+                <p class="nx-sub">${s.meta.filter(m => ['Authors','Published'].includes(m[0])).map(m => m[1]).join(' · ') || s.meta.map(m => m[1]).slice(0,2).join(' · ')}</p>
+              </div>
+              <svg class="nx-chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#0d1b2a" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+            <div class="nx-body">
+              <p class="nx-fulltitle">${s.t}</p>
+              <dl class="nx-meta">${s.meta.map(([k,v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+              <h4 class="nx-h">Research question</h4>
+              <p class="nx-p">${s.q}</p>
+              <h4 class="nx-h">Method</h4>
+              ${bullets(s.method)}
+              <div class="nx-block nx-block--a"><h4 class="nx-h">What the research found</h4>${bullets(s.results)}</div>
+              ${s.extra ? `<div class="nx-block nx-block--a"><h4 class="nx-h">${s.extra.title}</h4>${bullets(s.extra.items)}</div>` : ''}
+              <div class="nx-block nx-block--b"><h4 class="nx-h">What it does not show</h4>${bullets(s.limits)}</div>
+              <div class="nx-block nx-block--c"><h4 class="nx-h">How NetRise uses it</h4>${bullets(s.apply)}</div>
+              ${s.future ? `<div class="nx-block nx-block--d"><h4 class="nx-h">NetRise question to test</h4><p class="nx-p">${s.future}</p></div>` : ''}
+            </div>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+
   <section class="max-w-7xl mx-auto px-6 lg:px-10 py-24">
-    ${sectionHeader('Research Framework','How a player becomes a data point — and a data point becomes a training plan.')}
+    ${sectionHeader('Research Framework','How a player becomes a data point, and a data point becomes a training plan.')}
     <div class="mt-14 grid md:grid-cols-6 gap-4">
       ${framework.map((f,i)=>`
         <div class="fade-up flex flex-col items-center text-center">
@@ -816,60 +1166,161 @@ function pageResearch(){
     </div>
   </section>
 
-  <!-- LITERATURE REVIEWS -->
   <section class="bg-alabaster/40 py-24">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      ${sectionHeader('A. Literature Reviews','Five current reviews of existing research.')}
-      <div class="mt-12 grid gap-4">
-        ${STUDIES.map(s => `
-          <div class="fade-up bg-white border border-alabaster rounded-2xl p-7 card-hover">
-            <button class="w-full flex items-center justify-between gap-4 text-left" onclick="this.closest('.fade-up').querySelector('.study-body').classList.toggle('hidden'); this.querySelector('.chev').classList.toggle('rotate-180')">
-              <div class="flex items-start gap-5">
-                <span class="font-display text-denim text-lg">0${s.n}</span>
-                <div>
-                  <p class="text-[11px] font-medium uppercase tracking-wide text-dusk mb-1">${s.tag}</p>
-                  <h3 class="font-display font-700 text-lg">${s.t}</h3>
-                </div>
-              </div>
-              <svg class="chev shrink-0 transition-transform" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#0d1b2a" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </button>
-            <div class="study-body hidden mt-6 pt-6 border-t border-alabaster grid sm:grid-cols-3 gap-6 text-sm">
-              <div><p class="font-medium text-ink/80 mb-1.5">Objective</p><p class="text-ink/50 leading-relaxed">Placeholder — to be defined by the research lead.</p></div>
-              <div><p class="font-medium text-ink/80 mb-1.5">Methodology</p><p class="text-ink/50 leading-relaxed">Placeholder — review protocol in development.</p></div>
-              <div><p class="font-medium text-ink/80 mb-1.5">Current Literature</p><p class="text-ink/50 leading-relaxed">Placeholder — sources being catalogued.</p></div>
-              <div><p class="font-medium text-ink/80 mb-1.5">Key Findings</p><p class="text-ink/50 leading-relaxed">Placeholder — pending review completion.</p></div>
-              <div><p class="font-medium text-ink/80 mb-1.5">Limitations</p><p class="text-ink/50 leading-relaxed">Placeholder — to be documented.</p></div>
-              <div><p class="font-medium text-ink/80 mb-1.5">Future NetRise Study</p><p class="text-ink/50 leading-relaxed">Placeholder — original study concept in planning.</p></div>
-            </div>
+      ${sectionHeader('B. Original NetRise Research','Building our own player database, one season at a time.', 'These parts of the program are still being set up. Nothing below is a finding yet.')}
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        ${[
+          ['Upcoming Studies','Study concepts queued for future data collection.'],
+          ['Data Collection','Survey and testing protocols run at partner schools.'],
+          ['Survey Dashboard','A live view of intake as data comes in.'],
+          ['Performance Database','The structured store behind every analysis.'],
+          ['Statistical Analysis','Correlation, regression, and trend modeling.'],
+          ['Research Reports','Findings written up for coaches and players.'],
+          ['Interactive Graphs','Explorable charts once data volume allows.'],
+          ['Publications','Peer-facing write-ups of completed studies.'],
+          ['Annual Reports','A yearly summary of the research program.'],
+        ].map(([t,d]) => `
+          <div class="fade-up border border-alabaster rounded-2xl p-7 card-hover bg-white">
+            <div class="mb-5">${placeholderTag('In development')}</div>
+            <h3 class="font-display font-700 text-base mb-2">${t}</h3>
+            <p class="text-sm text-ink/50 leading-relaxed">${d}</p>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+function pageNutrition(){
+  const keys = ['carbs','protein','fruitveg','calcium','iron'];
+  return `
+  <section class="bg-ink text-white py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+      ${eyebrow('Nutrition').replace('text-dusk','text-denim')}
+      <h1 class="font-display font-800 text-4xl sm:text-5xl max-w-2xl leading-[1.08]">Fuel growth. Fuel training. Recover properly.</h1>
+      <p class="mt-6 text-base text-alabaster/60 max-w-xl leading-relaxed">General nutrition education for young athletes, built around ordinary, affordable food. NetRise does not provide individual diets.</p>
+    </div>
+    <div class="absolute inset-x-0 bottom-0 h-32 opacity-40">${trajectorySVG(1400,130,'#778da9',0.5)}</div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+    ${sectionHeader('Daily framework','What a good training day is built from.')}
+    <div class="nx-nutri">
+      ${keys.map(k => { const n = NUTRITION[k]; return `
+        <div class="nx-card fade-up">
+          <p class="nx-tag">${n.s}</p>
+          <h3 class="nx-title">${n.t}</h3>
+          <p class="nx-sub" style="margin:8px 0 14px">${n.d}</p>
+          ${chips(n.ex)}
+        </div>`; }).join('')}
+      <div class="nx-card fade-up">
+        <p class="nx-tag">Before, during, after</p>
+        <h3 class="nx-title">Hydration</h3>
+        <div class="nx-hyd">
+          <div><strong>Before</strong><span>Arrive hydrated.</span></div>
+          <div><strong>During</strong><span>Drink regularly.</span></div>
+          <div><strong>After</strong><span>Replace fluids lost during exercise.</span></div>
+        </div>
+        <p class="nx-sub" style="margin-top:14px">For long, hot or very sweaty sessions, electrolytes and carbohydrate-containing fluids may sometimes be useful.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-alabaster/40 py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      ${sectionHeader('Example training day','Nothing expensive, nothing complicated.')}
+      <div class="nx-meals">
+        ${MEALS.map(([t,items]) => `
+          <div class="nx-card fade-up">
+            <h3 class="nx-title" style="font-size:1.05rem">${t}</h3>
+            ${bullets(items)}
           </div>`).join('')}
       </div>
     </div>
   </section>
 
-  <!-- ORIGINAL RESEARCH -->
-  <section class="max-w-7xl mx-auto px-6 lg:px-10 py-24">
-    ${sectionHeader('B. Original NetRise Research','Building our own player database, one season at a time.')}
-    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      ${[
-        ['Upcoming Studies','Study concepts queued for future data collection.'],
-        ['Data Collection','Survey and testing protocols run at partner schools.'],
-        ['Survey Dashboard','A live view of intake as data comes in.'],
-        ['Performance Database','The structured store behind every analysis.'],
-        ['Statistical Analysis','Correlation, regression, and trend modeling.'],
-        ['Research Reports','Findings written up for coaches and players.'],
-        ['Interactive Graphs','Explorable charts once data volume allows.'],
-        ['Publications','Peer-facing write-ups of completed studies.'],
-        ['Annual Reports','A yearly summary of the research program.'],
-      ].map(([t,d]) => `
-        <div class="fade-up border border-alabaster rounded-2xl p-7 card-hover">
-          <div class="mb-5">${placeholderTag()}</div>
-          <h3 class="font-display font-700 text-base mb-2">${t}</h3>
-          <p class="text-sm text-ink/50 leading-relaxed">${d}</p>
-        </div>`).join('')}
+  <section class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+    <div class="nx-twocol">
+      <div class="nx-card fade-up">
+        <p class="nx-tag">Supplements</p>
+        <h3 class="nx-title">Food first</h3>
+        <p class="nx-sub" style="margin:8px 0 12px">NetRise does not recommend random pre-workouts, fat burners, testosterone boosters, so-called "jump supplements" or other unnecessary supplements. Young athletes should talk to a qualified sports dietitian or medical professional before using any supplement.</p>
+        <a href="#/insights/do-young-volleyball-players-need-supplements" class="nx-link">Read: Do Young Volleyball Players Need Supplements? →</a>
+      </div>
+      <div class="nx-card fade-up">
+        <p class="nx-tag">What NetRise does not do</p>
+        <h3 class="nx-title">No restriction, no cutting</h3>
+        <p class="nx-sub" style="margin:8px 0 12px">NetRise does not prescribe calorie restriction, weight-loss targets, bodybuilding diets, extreme protein targets, dehydration or cutting weight for young athletes.</p>
+        <p class="nx-sub">This page is general education, not medical or dietary advice for any individual.</p>
+      </div>
     </div>
   </section>
   `;
 }
+
+function pageAsk(){
+  const starters = ['What should I eat before training?','Does height decide your position?','How long does it take to improve a serve?','What is session RPE?','Do I need supplements?','How should a libero train?'];
+  return `
+  <section class="bg-ink text-white py-20 relative overflow-hidden">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 relative z-10 text-center">
+      ${eyebrow('Ask NetRise').replace('text-dusk','text-denim')}
+      <h1 class="font-display font-800 text-4xl sm:text-5xl leading-[1.08]">Want to know something?</h1>
+      <p class="mt-5 text-base text-alabaster/60 leading-relaxed">Ask about training, research, positions or nutrition. Answers come from the studies and plans on this site, with a link to read more.</p>
+      <form id="ask-form" class="nx-ask" autocomplete="off">
+        <input id="ask-input" type="text" placeholder="e.g. How do I jump higher?" aria-label="Your question">
+        <button type="submit">Ask</button>
+      </form>
+      <div class="nx-chips nx-chips--light" id="ask-starters">${starters.map(s => `<button type="button" data-q="${s}">${s}</button>`).join('')}</div>
+    </div>
+  </section>
+  <section class="max-w-3xl mx-auto px-6 lg:px-10 py-14">
+    <div id="ask-results" class="nx-results"><p class="nx-sub" style="text-align:center">Type a question above, or tap one of the suggestions.</p></div>
+    <p class="nx-note" style="margin-top:36px">This is a search over NetRise's own published summaries, not a chatbot or an AI, so it can only answer what's already on the site. It's general education, not medical advice.</p>
+  </section>
+  `;
+}
+
+/* ask: simple keyword search over KB + articles */
+const ASK_STOP = new Set('a an and are as at be by can do does for from how i in is it me my of on or should so that the their there this to what when where which who why will with you your about get have has need want know'.split(' '));
+function askTokens(s){ return s.toLowerCase().replace(/[^a-z0-9\s-]/g,' ').split(/\s+/).filter(w => w && !ASK_STOP.has(w)); }
+function askStem(w){ return w.replace(/(ing|ed|es|s)$/,''); }
+function runAsk(raw){
+  const out = document.getElementById('ask-results');
+  const qt = askTokens(raw).map(askStem).filter(w => w.length > 1);
+  if(!qt.length){ out.innerHTML = '<p class="nx-sub" style="text-align:center">Type a question above, or tap one of the suggestions.</p>'; return; }
+  const score = (text, weight) => { const words = askTokens(text).map(askStem); let s = 0; qt.forEach(t => { if(words.some(w => w === t || (t.length > 3 && (w.startsWith(t) || t.startsWith(w) && w.length > 3)))) s += weight; }); return s; };
+  const scored = KB.map(e => ({ e, s: score(e.k, 2) + score(e.q, 3) })).filter(x => x.s > 0).sort((a,b) => b.s - a.s).slice(0,3);
+  const related = ARTICLES.map(a => ({ a, s: score(a.t + ' ' + a.q + ' ' + a.d + ' ' + a.tag, 1) })).filter(x => x.s > 0).sort((a,b) => b.s - a.s).filter(x => !scored.some(k => k.e.link === '/insights/' + x.a.slug)).slice(0,3);
+  if(!scored.length && !related.length){
+    out.innerHTML = `<div class="nx-card"><h3 class="nx-title" style="font-size:1.05rem">No answer on the site yet</h3><p class="nx-sub" style="margin:8px 0 14px">That question isn't covered so far. Try different words, or browse the Insights, Research and Nutrition pages. To suggest a topic, get in touch through Get Involved.</p><a class="nx-link" href="#/involved">Get in touch →</a></div>`;
+    return;
+  }
+  const esc = s => s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  out.innerHTML = scored.map((x,i) => `
+    <div class="nx-card nx-answer ${i===0?'nx-answer--top':''}">
+      <p class="nx-tag">${i===0 ? 'Best match' : 'Also relevant'}</p>
+      <h3 class="nx-title" style="font-size:1.15rem">${esc(x.e.q)}</h3>
+      <p class="nx-p">${esc(x.e.a)}</p>
+      <a class="nx-link" href="#${x.e.link}">${x.e.link.startsWith('/insights/') ? 'Read the full article →' : 'Open the page →'}</a>
+    </div>`).join('') + (related.length ? `<h4 class="nx-h" style="margin-top:28px">More to read</h4>` + related.map(x => `<a class="nx-mini" href="#/insights/${x.a.slug}"><strong>${x.a.t}</strong><span>${x.a.q}</span></a>`).join('') : '');
+}
+document.addEventListener('submit', (e) => {
+  if(e.target.id === 'ask-form'){ e.preventDefault(); runAsk(document.getElementById('ask-input').value); }
+});
+document.addEventListener('click', (e) => {
+  const st = e.target.closest('#ask-starters button');
+  if(st){ const q = st.getAttribute('data-q'); document.getElementById('ask-input').value = q; runAsk(q); }
+  const tg = e.target.closest('.nx-toggle');
+  if(tg){ const it = tg.closest('.nx-item'); const open = it.classList.toggle('is-open'); tg.setAttribute('aria-expanded', open); }
+});
+document.addEventListener('input', (e) => {
+  if(e.target.id === 'nx-min' || e.target.id === 'nx-rpe'){
+    const m = parseFloat(document.getElementById('nx-min').value) || 0, r = parseFloat(document.getElementById('nx-rpe').value) || 0;
+    document.getElementById('nx-load').textContent = Math.round(m * r);
+  }
+});
+
 
 function articleCard(a){
   return `
@@ -1146,6 +1597,8 @@ const ROUTES = {
   '/learn': { render: pageLearn, title: 'Learn — NetRise' },
   '/training': { render: pageTraining, title: 'Training Plans — NetRise' },
   '/research': { render: pageResearch, title: 'Research — NetRise' },
+  '/nutrition': { render: pageNutrition, title: 'Nutrition — NetRise' },
+  '/ask': { render: pageAsk, title: 'Want to know something? — NetRise' },
   '/insights': { render: pageInsights, title: 'Insights — NetRise' },
   '/community': { render: pageCommunity, title: 'Community — NetRise' },
   '/stories': { render: pageStories, title: 'Stories — NetRise' },
@@ -1222,6 +1675,7 @@ function render(){
     document.title = route.title;
   }
   attachRouteLinks();
+  document.body.classList.toggle('on-ask', path === '/ask');
   markActiveNav(path);
   window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
   closeMobilePanel();
@@ -1261,5 +1715,6 @@ window.addEventListener('hashchange', render);
 attachRouteLinks();
 render();
 </script>
+<a data-route="/ask" class="ask-fab" aria-label="Want to know something?"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>Want to know something?</a>
 </body>
 </html>
